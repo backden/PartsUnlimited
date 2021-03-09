@@ -17,6 +17,11 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Check .NET core version
+      dotnet --version
 
 - task: NuGetCommand@2
   inputs:
